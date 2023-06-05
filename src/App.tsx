@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from "./components/About";
 import Error from "./components/Error";
 import Navigation from "./components/Navigation";
+import styles from "./App.module.scss";
 
 
 class App extends Component {
@@ -12,7 +13,7 @@ class App extends Component {
     // @ts-ignore
     return (
         <Router>
-          <div>
+          <div className={styles.myApp}>
             <Navigation />
             <Routes>
               <Route path="/" Component={Home}/>
