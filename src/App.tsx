@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Home from './components/Home';
+import About from "./components/About";
+import Error from "./components/Error";
+import Navigation from "./components/Navigation";
+import styles from "./App.module.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    // @ts-ignore
+    return (
+        <Router>
+          <div className={styles.myApp}>
+            <Navigation />
+            <Routes>
+              <Route path="/" Component={Home}/>
+              <Route path="/about" Component={About}/>
+              <Route Component={Error}/>
+            </Routes>
+          </div>
+        </Router>
+    );
+  }
 }
 
 export default App;
