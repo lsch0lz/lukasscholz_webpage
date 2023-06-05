@@ -25,6 +25,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./
           push: true
           tags: picasso99/webpage:latest
