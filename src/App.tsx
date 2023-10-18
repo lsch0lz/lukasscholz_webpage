@@ -6,6 +6,7 @@ import About from "./components/About";
 import Error from "./components/Error";
 import Navigation from "./components/Navigation";
 import Blog from "./components/Blog";
+import Luma from "./components/Luma";
 import styles from "./App.module.scss";
 
 
@@ -20,6 +21,7 @@ class App extends Component {
               <Route path="/" Component={Home}/>
               <Route path="/about" Component={About}/>
                 <Route path="/blog" Component={Blog}/>
+                <Route path="/luma" Component={Luma}/>
               <Route Component={Error}/>
             </Routes>
           </div>
