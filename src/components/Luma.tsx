@@ -18,6 +18,7 @@ const Luma = () => {
                     <ambientLight intensity={2} />
                     <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
                     <pointLight position={[-10, -10, -10]} />
+                    <OrbitControls target={[0, 0, 0]} /> {/* Add OrbitControls */}
                     <GltfModel modelPath={process.env.PUBLIC_URL + "/textured_mesh_glb.glb"} scale={40} />
                 </Canvas>
             </div>
