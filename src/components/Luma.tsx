@@ -15,7 +15,7 @@ const Luma = () => {
             <h1>Bonsai</h1>
             <div style={canvasStyle}>
                 <Canvas>
-                    <ambientLight intensity={0.3} />
+                    <ambientLight intensity={2} />
                     <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
                     <pointLight position={[-10, -10, -10]} />
                     <GltfModel modelPath={process.env.PUBLIC_URL + "/textured_mesh_glb.glb"} scale={40} />
