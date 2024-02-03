@@ -6,7 +6,8 @@ import About from "./components/About";
 import Error from "./components/Error";
 import Navigation from "./components/Navigation";
 import Blog from "./components/Blog";
-import Luma from "./components/Luma";
+import Nerf from "./components/Nerf";
+import Bonsai from "./components/Bonsai";
 import styles from "./App.module.scss";
 
 
@@ -21,7 +22,8 @@ class App extends Component {
               <Route path="/" Component={Home}/>
               <Route path="/about" Component={About}/>
                 <Route path="/blog" Component={Blog}/>
-                <Route path="/luma" Component={Luma}/>
+                <Route path="/nerf" Component={Nerf}/>
+                <Route path="/bonsai" Component={Bonsai}/>
               <Route Component={Error}/>
             </Routes>
           </div>
